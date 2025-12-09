@@ -11,9 +11,6 @@ use App\Http\Controllers\Web\Admin\MissionController;
 use App\Http\Controllers\Web\Admin\FeatureController;
 use App\Http\Controllers\Web\Admin\CommunityController;
 
-
-
-
 //login Register
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'webLogin'])->name('login.submit');
