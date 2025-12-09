@@ -101,6 +101,27 @@
             </a>
           </li>
 
+
+
+  <li class="nav-item menu-items">
+  <a class="nav-link" data-bs-toggle="collapse" href="#aboutMenu" role="button" aria-expanded="false" aria-controls="aboutMenu">
+    <span class="menu-icon">
+      <i class="mdi mdi-information-outline"></i>
+    </span>
+    <span class="menu-title">Home Page</span>
+    <i class="menu-arrow"></i>
+  </a>
+  <div class="collapse" id="aboutMenu">
+    <ul class="nav flex-column sub-menu">
+      <li class="nav-item"><a class="nav-link" href="">Hero Section</a></li>
+      <li class="nav-item"><a class="nav-link" href="">Pickup Section</a></li>
+      <li class="nav-item"><a class="nav-link" href="">Vehicle Health Section</a></li>
+      <li class="nav-item"><a class="nav-link" href="">Choose Card Section</a></li>
+      <li class="nav-item"><a class="nav-link" href="">Repair Service</a></li>
+    </ul>
+  </div>
+</li>
+
   <li class="nav-item menu-items">
   <a class="nav-link" data-bs-toggle="collapse" href="#aboutMenu" role="button" aria-expanded="false" aria-controls="aboutMenu">
     <span class="menu-icon">
