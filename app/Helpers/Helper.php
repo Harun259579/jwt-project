@@ -21,4 +21,8 @@ class Helper
 
         return $uploadPath . '/' . $filename;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 67fcf93 (update message)

@@ -10,6 +10,7 @@ use App\Http\Controllers\Web\Admin\VisionController;
 use App\Http\Controllers\Web\Admin\MissionController;
 use App\Http\Controllers\Web\Admin\FeatureController;
 use App\Http\Controllers\Web\Admin\CommunityController;
+use App\Http\Controllers\Web\HomePageController;
 
 
 
@@ -143,4 +144,21 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/no-access', function() {
     return "You are not authorized!";
+});
+     
+
+
+
+
+Route::prefix('cms')->name('cms.')->group(function () {
+
+    // Home Page CMS - Index (show all sections)
+    Route::get('home-page', [HomePageController::class, 'index'])->name('homepage.index');
+
+    // Home Page CMS - Store/Update Section
+    Route::patch('home-page/section/update', [HomePageController::class, 'store'])->name('homepage.section.update');
+
+    // Optional: If you want create/store separate sections
+    // Route::get('home-page/section/create', [HomePageController::class, 'createSection'])->name('homepage.section.create');
+    // Route::post('home-page/section/store', [HomePageController::class, 'storeSection'])->name('homepage.section.store');
 });

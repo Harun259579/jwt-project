@@ -23,8 +23,14 @@ class HomePageController extends Controller
         $data['vehicle']   = HomePageContent::where('page', Page::HomePage)->where('section', Section::Vehicle_Health_Section)->first();
         $data['choose']    = HomePageContent::where('page', Page::HomePage)->where('section', Section::Choose_Card_Section)->first();
         $data['repair']    = HomePageContent::where('page', Page::HomePage)->where('section', Section::Repair_Service)->first();
+<<<<<<< HEAD
 
         return view('backend.cms.home-page.index', compact('data'));
+=======
+        
+
+        return view('backend.cms.home_page.index', compact('data'));
+>>>>>>> 67fcf93 (update message)
     }
 
 
@@ -34,6 +40,10 @@ class HomePageController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+<<<<<<< HEAD
+=======
+            'page'            =>'required',
+>>>>>>> 67fcf93 (update message)
             'section'         => 'required',
             'title'           => 'nullable',
             'sub_title'       => 'nullable',
@@ -47,7 +57,12 @@ class HomePageController extends Controller
             'email'           => 'nullable',
             'phone'           => 'nullable',
             'location'        => 'nullable',
+<<<<<<< HEAD
             'status'          => 'nullable',
+=======
+            'status'         => 'nullable|in:active,inactive',
+
+>>>>>>> 67fcf93 (update message)
             'image'           => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:4096',
             'video'           => 'nullable',
         ]);
@@ -110,7 +125,11 @@ class HomePageController extends Controller
                 'email'            => $request->email,
                 'phone'            => $request->phone,
                 'location'         => $request->location,
+<<<<<<< HEAD
                 'status'           => $request->status,
+=======
+                'status'           => $request->status ?? 'active',
+>>>>>>> 67fcf93 (update message)
                 'image'            => $imagePath,
                 'video'            => $videoPath,
             ]

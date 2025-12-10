@@ -100,27 +100,28 @@
               <span class="menu-title">Contact</span>
             </a>
           </li>
+          
 
 
 
   <li class="nav-item menu-items">
-  <a class="nav-link" data-bs-toggle="collapse" href="#aboutMenu" role="button" aria-expanded="false" aria-controls="aboutMenu">
+  <a class="nav-link" data-bs-toggle="collapse" href="#homeMenu" role="button" aria-expanded="false" aria-controls="homeMenu">
     <span class="menu-icon">
       <i class="mdi mdi-information-outline"></i>
     </span>
-    <span class="menu-title">Home Page</span>
+    <span class="menu-title">CMS</span>
     <i class="menu-arrow"></i>
   </a>
-  <div class="collapse" id="aboutMenu">
+  <div class="collapse" id="homeMenu" data-bs-parent="#sidebar">
     <ul class="nav flex-column sub-menu">
-      <li class="nav-item"><a class="nav-link" href="">Hero Section</a></li>
-      <li class="nav-item"><a class="nav-link" href="">Pickup Section</a></li>
-      <li class="nav-item"><a class="nav-link" href="">Vehicle Health Section</a></li>
-      <li class="nav-item"><a class="nav-link" href="">Choose Card Section</a></li>
-      <li class="nav-item"><a class="nav-link" href="">Repair Service</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{route('cms.homepage.index')}}">Home Page Contents</a></li>
+      <li class="nav-item"><a class="nav-link" href="">Service Page Contents</a></li>
+      <li class="nav-item"><a class="nav-link" href="">About Page Contents</a></li>
+    
     </ul>
   </div>
-</li>
+ </li>
+
 
   <li class="nav-item menu-items">
   <a class="nav-link" data-bs-toggle="collapse" href="#aboutMenu" role="button" aria-expanded="false" aria-controls="aboutMenu">
@@ -130,7 +131,7 @@
     <span class="menu-title">About</span>
     <i class="menu-arrow"></i>
   </a>
-  <div class="collapse" id="aboutMenu">
+  <div class="collapse" id="aboutMenu" data-bs-parent="#sidebar">
     <ul class="nav flex-column sub-menu">
       <li class="nav-item"><a class="nav-link" href="{{ route('hero.index') }}">Hero Section</a></li>
       <li class="nav-item"><a class="nav-link" href="{{ route('vission.index') }}">Vission Section</a></li>
@@ -152,4 +153,6 @@
             </a>
           </li>
         </ul>
-      </nav>
+
+
+</nav>
